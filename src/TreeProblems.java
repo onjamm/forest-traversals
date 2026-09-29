@@ -119,7 +119,13 @@ public class TreeProblems {
    Hint: There's a simple way to do this!
   */
   public static int sumTree(Map<Integer, List<Integer>> tree) {
-    return -1;
+    if (tree == null) return 0;
+    //Ahaha simple because every key is the node value, so just gotta add the keys!
+    int result = 0;
+    for (int node : tree.keySet()) {
+        result += node;
+    }
+    return result;
   }
 
   /*
